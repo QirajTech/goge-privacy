@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Goge — Privacy Policy</title>
+  <meta name="description" content="How the Goge app handles your data: your ledger stays on your phone; only Community posts and votes reach our servers.">
+  <style>
+    :root {
+      --paper: #f6f3ea;
+      --plate: #fffdf7;
+      --ink: #1b1815;
+      --ink-faded: #534c40;
+      --hairline: #e3dfd3;
+      --gold: #9a7a2e;
+      --gold-soft: #f1e6c6;
+      color-scheme: light dark;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --paper: #17140f;
+        --plate: #201c16;
+        --ink: #f1ece0;
+        --ink-faded: #c9c2b1;
+        --hairline: #332e27;
+        --gold: #d8b463;
+        --gold-soft: #3a3020;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Noto Sans Arabic", sans-serif;
+    }
+    main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+    header { margin-bottom: 24px; }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .seal {
+      width: 40px; height: 40px; border-radius: 50%;
+      border: 3px solid var(--gold); display: grid; place-items: center; flex: none;
+    }
+    .seal::after { content: ""; width: 10px; height: 10px; background: var(--gold); transform: rotate(45deg); }
+    h1 { font-size: 1.6rem; line-height: 1.25; margin: 0; }
+    .meta { color: var(--ink-faded); font-size: .9rem; margin: 8px 0 0; }
+    nav.lang { display: flex; gap: 8px; margin-top: 20px; flex-wrap: wrap; }
+    nav.lang a {
+      text-decoration: none; color: var(--ink); border: 1px solid var(--hairline);
+      background: var(--plate); padding: 6px 14px; border-radius: 999px; font-size: .9rem;
+    }
+    nav.lang a:hover, nav.lang a:focus-visible { border-color: var(--gold); outline: none; }
+    section.policy { margin-top: 24px; min-width: 0; }
+    .plate {
+      background: var(--plate); border: 1px solid var(--hairline); border-radius: 12px;
+      padding: 20px; margin: 16px 0;
+    }
+    .summary { border-color: var(--gold); background: var(--gold-soft); }
+    h2 { font-size: 1.15rem; margin: 0 0 8px; }
+    h3 { font-size: 1rem; margin: 16px 0 4px; }
+    p { margin: 8px 0; }
+    ul { margin: 8px 0; padding-inline-start: 22px; }
+    li { margin: 4px 0; }
+    a { color: var(--gold); }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: .93rem; }
+    th, td { text-align: start; vertical-align: top; padding: 8px; border-top: 1px solid var(--hairline); }
+    th { color: var(--ink-faded); font-weight: 600; }
+    code { font-size: .9em; overflow-wrap: anywhere; }
+    .muted { color: var(--ink-faded); font-size: .9rem; }
+    [dir="rtl"] { font-family: "Noto Sans Arabic", "Segoe UI", Tahoma, system-ui, sans-serif; }
+    footer { margin-top: 48px; color: var(--ink-faded); font-size: .85rem; text-align: center; }
+    /* Mobile: one column, Arabic first. minmax(0, 1fr) rather than 1fr, so a wide table or a long
+       address can never push the column past the screen. */
+    .policies { display: grid; grid-template-columns: minmax(0, 1fr); }
+    .policies #ar { order: -1; }
+    /* Desktop: English and Arabic side by side. Kept last so it overrides the rules above. */
+    @media (min-width: 1024px) {
+      main { max-width: 1240px; }
+      .policies { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 32px; align-items: start; }
+      .policies #ar { order: 0; }
+      /* Both languages are on screen, so the jump links have nothing to jump to. */
+      nav.lang { display: none; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="brand">
+      <div class="seal" aria-hidden="true"></div>
+      <div>
+        <h1>Goge — Privacy Policy<br><span lang="ar" dir="rtl">Goge — سياسة الخصوصية</span></h1>
+        <p class="meta">Effective 2 October 2026 · Developer: Qiraj · <a href="mailto:qiraj.tech+support@gmail.com">qiraj.tech+support@gmail.com</a></p>
+      </div>
+    </div>
+    <nav class="lang" aria-label="Language">
+      <a href="#ar" hreflang="ar" lang="ar">العربية</a>
+      <a href="#en" hreflang="en">English</a>
+    </nav>
+  </header>
+
+  <div class="policies">
+  <!-- ============================== ENGLISH ============================== -->
+  <section class="policy" id="en" lang="en" dir="ltr">
+    <div class="plate summary">
+      <h2>In short</h2>
+      <ul>
+        <li>Everything you record in Goge — purchases, prices, zakat years, your PIN and settings — is stored <strong>only on your phone</strong>, encrypted. We never receive it.</li>
+        <li>The only things that reach our servers are what you send through the <strong>Community</strong> feature: problem reports, feature requests and votes, linked to an anonymous ID.</li>
+        <li>No ads, no analytics, no tracking, and we never sell data.</li>
+      </ul>
+    </div>
+
+    <div class="plate">
+      <h2>1. Who we are</h2>
+      <p>Goge is an app for tracking gold and silver holdings and working out zakat. It is developed by <strong>Qiraj</strong> (“we”, “us”). This policy explains what data the app handles, where it goes, and the choices you have. Contact: <a href="mailto:qiraj.tech+support@gmail.com">qiraj.tech+support@gmail.com</a>.</p>
+    </div>
+
+    <div class="plate">
+      <h2>2. Data that stays on your phone</h2>
+      <p>The following is stored in an encrypted database on your device and is <strong>never uploaded</strong> to us or anyone else:</p>
+      <ul>
+        <li>Your purchases (metal type, grams, prices, fees, dates, notes).</li>
+        <li>Gold and silver prices you fetch or enter, and the prices recorded for past days.</li>
+        <li>Your hawl start date, zakat years and whether you marked them paid.</li>
+        <li>Your settings: language, theme, lock mode and your PIN.</li>
+      </ul>
+      <p>The app also ships with a built-in history of silver prices, which is public market data and contains nothing about you.</p>
+      <p><strong>Backups and exports</strong> are files the app creates on your request (a password-protected backup, or a CSV export). They go only where you choose to save or share them; we never receive them.</p>
+      <p><strong>Your PIN cannot be recovered.</strong> It never leaves your phone and protects the key your data is encrypted with, so nobody — including us — can recover or reset it. If you forget it, the only way back in is to clear the app’s data, which erases everything you recorded unless you exported a backup.</p>
+    </div>
+
+    <div class="plate">
+      <h2>3. Data that leaves your phone</h2>
+
+      <h3>a) Community (only if you use it)</h3>
+      <p>When you open Community, report a problem, request a feature or vote, the app signs you in <strong>anonymously</strong> with Firebase Authentication. This creates a random user ID; it is not linked to your name, email, phone number or Google account. The following is then stored on Google’s Firebase servers:</p>
+      <div class="table-wrap">
+        <table>
+          <tr><th>What</th><th>Details</th><th>Who can see it</th></tr>
+          <tr><td>Your anonymous ID</td><td>A random identifier created by Firebase.</td><td>Us.</td></tr>
+          <tr><td>Your posts</td><td>Title, description, type (problem or feature request), whether it is public, time posted, and like/dislike counts.</td><td><strong>Public posts:</strong> every Goge user. <strong>Private posts:</strong> only us.</td></tr>
+          <tr><td>Your votes</td><td>Whether you liked or disliked a post.</td><td>Counts are public; who voted is visible only to us.</td></tr>
+        </table>
+      </div>
+      <p class="muted">Please don’t include personal information in posts. A public post can be read by anyone using the app.</p>
+
+      <h3>b) App configuration</h3>
+      <p>The app uses Firebase Remote Config to learn the latest app version and the store link. Firebase uses an installation identifier for this. It contains no personal information about you.</p>
+
+      <h3>c) Fetching prices</h3>
+      <p>When you fetch or compare prices, the app reads the public price pages of local gold price providers directly. No personal data is sent; as with any website visit, those providers can see your IP address and device type, and their own privacy policies apply.</p>
+    </div>
+
+    <div class="plate">
+      <h2>4. What we don’t do</h2>
+      <ul>
+        <li>No advertising and no ad identifiers.</li>
+        <li>No analytics, crash reporting or tracking SDKs.</li>
+        <li>No access to your location, contacts, photos, camera, microphone or files.</li>
+        <li>We do not sell, rent or trade any data.</li>
+      </ul>
+    </div>
+
+    <div class="plate">
+      <h2>5. Permissions</h2>
+      <ul>
+        <li><strong>Internet</strong> — to fetch prices and use Community.</li>
+        <li><strong>Network state</strong> — to tell you when you are offline.</li>
+        <li><strong>Biometric</strong> — only if you choose to unlock the app with your fingerprint or face. Biometric data is handled by Android and never reaches the app or us.</li>
+      </ul>
+    </div>
+
+    <div class="plate">
+      <h2>6. Sharing and service providers</h2>
+      <p>Community data is stored by <strong>Google Firebase</strong> (Authentication, Cloud Firestore and Remote Config), which processes it on our behalf. Firestore data is stored in the United States. See <a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase’s privacy and security information</a>. We do not share your data with anyone else, except where required by law.</p>
+    </div>
+
+    <div class="plate">
+      <h2>7. Security</h2>
+      <p>Your on-device data is encrypted, and the app can be locked with a PIN or biometrics. Data sent to Firebase travels over encrypted connections (HTTPS/TLS). No system is perfectly secure, but we collect as little as possible so there is little to protect.</p>
+    </div>
+
+    <div class="plate">
+      <h2>8. Keeping and deleting your data</h2>
+      <ul>
+        <li><strong>On your phone:</strong> kept until you delete it in the app, clear the app’s data, or uninstall Goge — any of which deletes it permanently.</li>
+        <li><strong>Community:</strong> posts and votes are kept until they are deleted. You can edit a post for 10 minutes after posting and change your vote at any time. To delete your posts, votes or anonymous ID, email <a href="mailto:qiraj.tech+support@gmail.com">qiraj.tech+support@gmail.com</a> with the titles of your posts and roughly when you posted them; we will delete them within 30 days.</li>
+      </ul>
+    </div>
+
+    <div class="plate">
+      <h2>9. Children</h2>
+      <p>Goge is not directed at children under 13, and we do not knowingly collect data from them. If you believe a child has posted in Community, contact us and we will delete it.</p>
+    </div>
+
+    <div class="plate">
+      <h2>10. Changes to this policy</h2>
+      <p>If we change this policy, we will update this page and the effective date above. Significant changes will also be noted in the app’s update notes.</p>
+    </div>
+
+    <div class="plate">
+      <h2>11. Contact</h2>
+      <p>Questions or requests: <a href="mailto:qiraj.tech+support@gmail.com">qiraj.tech+support@gmail.com</a></p>
+    </div>
+  </section>
+
+  <!-- ============================== ARABIC ============================== -->
+  <section class="policy" id="ar" lang="ar" dir="rtl">
+    <div class="plate summary">
+      <h2>باختصار</h2>
+      <ul>
+        <li>كل ما تسجله في Goge — المشتريات والأسعار وسنوات الزكاة ورمز القفل والإعدادات — يُحفظ <strong>على هاتفك فقط</strong> ومشفّرًا. لا يصلنا أي شيء منه.</li>
+        <li>الشيء الوحيد الذي يصل إلى خوادمنا هو ما ترسله عبر ميزة <strong>المجتمع</strong>: البلاغات عن المشاكل وطلبات الميزات والتصويت، مرتبطة بمعرّف مجهول.</li>
+        <li>لا إعلانات، ولا تحليلات، ولا تتبّع، ولا نبيع أي بيانات أبدًا.</li>
+      </ul>
+    </div>
+
+    <div class="plate">
+      <h2>١. من نحن</h2>
+      <p>Goge تطبيق لمتابعة مقتنيات الذهب والفضة وحساب الزكاة، من تطوير <strong>Qiraj</strong> («نحن»). توضّح هذه السياسة البيانات التي يتعامل معها التطبيق، وإلى أين تذهب، والخيارات المتاحة لك. للتواصل: <a href="mailto:qiraj.tech+support@gmail.com">qiraj.tech+support@gmail.com</a>.</p>
+    </div>
+
+    <div class="plate">
+      <h2>٢. بيانات تبقى على هاتفك</h2>
+      <p>ما يلي يُحفظ في قاعدة بيانات مشفّرة على جهازك، و<strong>لا يُرفع أبدًا</strong> إلينا ولا إلى أي جهة أخرى:</p>
+      <ul>
+        <li>مشترياتك (نوع المعدن، الجرامات، الأسعار، العمولات، التواريخ، الملاحظات).</li>
+        <li>أسعار الذهب والفضة التي تجلبها أو تدخلها، والأسعار المسجّلة لأيام سابقة.</li>
+        <li>تاريخ بداية الحول، وسنوات الزكاة، وما إذا كنت قد سجّلتها مدفوعة.</li>
+        <li>إعداداتك: اللغة، والمظهر، وطريقة القفل، ورمز PIN.</li>
+      </ul>
+      <p>يأتي التطبيق أيضًا بسجل تاريخي لأسعار الفضة، وهو بيانات سوق عامة لا تحتوي على أي شيء عنك.</p>
+      <p><strong>النسخ الاحتياطية والتصدير</strong> ملفات ينشئها التطبيق عند طلبك (نسخة احتياطية محمية بكلمة مرور، أو تصدير CSV). تذهب فقط إلى المكان الذي تختار حفظها فيه أو مشاركتها معه، ولا نستلمها أبدًا.</p>
+      <p><strong>لا يمكن استرجاع رمز PIN.</strong> فهو لا يغادر هاتفك، ويحمي المفتاح الذي تُشفَّر به بياناتك، لذلك لا يستطيع أحد — ونحن منهم — استرجاعه أو إعادة تعيينه. إن نسيته فالطريقة الوحيدة للدخول هي مسح بيانات التطبيق، وهذا يحذف كل ما سجلته ما لم تكن قد صدّرت نسخة احتياطية.</p>
+    </div>
+
+    <div class="plate">
+      <h2>٣. بيانات تغادر هاتفك</h2>
+
+      <h3>أ) المجتمع (فقط إن استخدمته)</h3>
+      <p>عندما تفتح المجتمع، أو تبلّغ عن مشكلة، أو تطلب ميزة، أو تصوّت، يسجّل التطبيق دخولك <strong>بشكل مجهول</strong> عبر Firebase Authentication. يُنشئ ذلك معرّفًا عشوائيًا غير مرتبط باسمك أو بريدك أو رقم هاتفك أو حساب Google الخاص بك. ثم يُحفظ ما يلي على خوادم Firebase التابعة لـ Google:</p>
+      <div class="table-wrap">
+        <table>
+          <tr><th>ماذا</th><th>التفاصيل</th><th>من يستطيع رؤيته</th></tr>
+          <tr><td>معرّفك المجهول</td><td>معرّف عشوائي ينشئه Firebase.</td><td>نحن.</td></tr>
+          <tr><td>منشوراتك</td><td>العنوان، والوصف، والنوع (مشكلة أو طلب ميزة)، وهل هو عام، ووقت النشر، وعدد الإعجابات وعدم الإعجاب.</td><td><strong>المنشورات العامة:</strong> كل مستخدمي Goge. <strong>المنشورات الخاصة:</strong> نحن فقط.</td></tr>
+          <tr><td>تصويتك</td><td>هل أعجبك المنشور أم لا.</td><td>الأعداد عامة؛ أما من صوّت فلا يراه إلا نحن.</td></tr>
+        </table>
+      </div>
+      <p class="muted">من فضلك لا تضع معلومات شخصية في منشوراتك. المنشور العام يستطيع قراءته أي شخص يستخدم التطبيق.</p>
+
+      <h3>ب) إعدادات التطبيق</h3>
+      <p>يستخدم التطبيق Firebase Remote Config لمعرفة أحدث إصدار ورابط المتجر. يستخدم Firebase لذلك معرّفًا للتثبيت لا يحتوي على أي معلومات شخصية عنك.</p>
+
+      <h3>ج) جلب الأسعار</h3>
+      <p>عند جلب الأسعار أو مقارنتها، يقرأ التطبيق صفحات الأسعار العامة لمزوّدي أسعار الذهب المحليين مباشرة. لا تُرسَل أي بيانات شخصية؛ ومثل أي زيارة لموقع، يمكن لهؤلاء المزوّدين رؤية عنوان IP ونوع جهازك، وتنطبق عليهم سياسات الخصوصية الخاصة بهم.</p>
+    </div>
+
+    <div class="plate">
+      <h2>٤. ما لا نفعله</h2>
+      <ul>
+        <li>لا إعلانات ولا معرّفات إعلانية.</li>
+        <li>لا أدوات تحليل أو تقارير أعطال أو تتبّع.</li>
+        <li>لا وصول إلى موقعك أو جهات اتصالك أو صورك أو الكاميرا أو الميكروفون أو ملفاتك.</li>
+        <li>لا نبيع أي بيانات ولا نؤجرها ولا نتاجر بها.</li>
+      </ul>
+    </div>
+
+    <div class="plate">
+      <h2>٥. الأذونات</h2>
+      <ul>
+        <li><strong>الإنترنت</strong> — لجلب الأسعار واستخدام المجتمع.</li>
+        <li><strong>حالة الشبكة</strong> — لإخبارك عندما تكون غير متصل.</li>
+        <li><strong>البصمة</strong> — فقط إن اخترت فتح التطبيق ببصمتك أو وجهك. يتعامل Android مع بيانات البصمة، ولا تصل إلى التطبيق ولا إلينا.</li>
+      </ul>
+    </div>
+
+    <div class="plate">
+      <h2>٦. المشاركة ومزوّدو الخدمة</h2>
+      <p>تُحفظ بيانات المجتمع لدى <strong>Google Firebase</strong> ‏(Authentication وCloud Firestore وRemote Config)، الذي يعالجها نيابةً عنا. وتُحفظ بيانات Firestore في الولايات المتحدة. راجع <a href="https://firebase.google.com/support/privacy" rel="noopener">معلومات الخصوصية والأمان من Firebase</a>. لا نشارك بياناتك مع أي جهة أخرى، إلا إذا ألزمنا القانون بذلك.</p>
+    </div>
+
+    <div class="plate">
+      <h2>٧. الأمان</h2>
+      <p>بياناتك على الجهاز مشفّرة، ويمكن قفل التطبيق برمز PIN أو بالبصمة. وتنتقل البيانات المرسلة إلى Firebase عبر اتصالات مشفّرة (HTTPS/TLS). لا يوجد نظام آمن تمامًا، لكننا نجمع أقل ما يمكن، فيبقى القليل مما يحتاج إلى حماية.</p>
+    </div>
+
+    <div class="plate">
+      <h2>٨. الاحتفاظ بالبيانات وحذفها</h2>
+      <ul>
+        <li><strong>على هاتفك:</strong> تبقى حتى تحذفها من التطبيق، أو تمسح بيانات التطبيق، أو تزيل Goge — وأيٌّ من ذلك يحذفها نهائيًا.</li>
+        <li><strong>المجتمع:</strong> تبقى المنشورات والتصويت حتى تُحذف. يمكنك تعديل منشورك خلال 10 دقائق من نشره، وتغيير تصويتك في أي وقت. لحذف منشوراتك أو تصويتك أو معرّفك المجهول، راسلنا على <a href="mailto:qiraj.tech+support@gmail.com">qiraj.tech+support@gmail.com</a> مع عناوين منشوراتك ووقت نشرها تقريبًا، وسنحذفها خلال 30 يومًا.</li>
+      </ul>
+    </div>
+
+    <div class="plate">
+      <h2>٩. الأطفال</h2>
+      <p>Goge ليس موجّهًا للأطفال دون 13 عامًا، ولا نجمع بياناتهم عن علم. إن كنت تعتقد أن طفلًا نشر في المجتمع، فتواصل معنا وسنحذف ما نشره.</p>
+    </div>
+
+    <div class="plate">
+      <h2>١٠. التغييرات على هذه السياسة</h2>
+      <p>إذا غيّرنا هذه السياسة فسنحدّث هذه الصفحة وتاريخ السريان أعلاه. وسنذكر التغييرات المهمة أيضًا في ملاحظات تحديث التطبيق.</p>
+    </div>
+
+    <div class="plate">
+      <h2>١١. التواصل</h2>
+      <p>للأسئلة أو الطلبات: <a href="mailto:qiraj.tech+support@gmail.com">qiraj.tech+support@gmail.com</a></p>
+    </div>
+  </section>
+  </div>
+
+  <footer>© 2026 Qiraj · Goge</footer>
+</main>
+</body>
+</html>
