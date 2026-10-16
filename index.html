@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Goge — Privacy Policy</title>
-  <meta name="description" content="How the Goge app handles your data: your ledger stays on your phone; only Community posts and votes reach our servers.">
+  <meta name="description" content="How the Goge app handles your data: your ledger stays on your phone; only Community posts, votes and reports reach our servers.">
   <style>
     :root {
       --paper: #f6f3ea;
@@ -92,7 +92,7 @@
       <div class="seal" aria-hidden="true"></div>
       <div>
         <h1>Goge — Privacy Policy<br><span lang="ar" dir="rtl">Goge — سياسة الخصوصية</span></h1>
-        <p class="meta">Effective 2 October 2026 · Developer: Qiraj · <a href="mailto:qiraj.tech+support@gmail.com">qiraj.tech+support@gmail.com</a></p>
+        <p class="meta">Effective 16 October 2026 · Developer: Qiraj · <a href="mailto:qiraj.tech+support@gmail.com">qiraj.tech+support@gmail.com</a></p>
       </div>
     </div>
     <nav class="lang" aria-label="Language">
@@ -108,7 +108,7 @@
       <h2>In short</h2>
       <ul>
         <li>Everything you record in Goge — purchases, prices, zakat years, your PIN and settings — is stored <strong>only on your phone</strong>, encrypted. We never receive it.</li>
-        <li>The only things that reach our servers are what you send through the <strong>Community</strong> feature: problem reports, feature requests and votes, linked to an anonymous ID.</li>
+        <li>The only things that reach our servers are what you send through the <strong>Community</strong> feature: your posts, votes and reports, linked to an anonymous ID.</li>
         <li>No ads, no analytics, no tracking, and we never sell data.</li>
       </ul>
     </div>
@@ -123,11 +123,12 @@
       <p>The following is stored in an encrypted database on your device and is <strong>never uploaded</strong> to us or anyone else:</p>
       <ul>
         <li>Your purchases (metal type, grams, prices, fees, dates, notes).</li>
-        <li>Gold and silver prices you fetch or enter, and the prices recorded for past days.</li>
+        <li>Cash you record for zakat, with its amounts and currencies.</li>
+        <li>Gold and silver prices and exchange rates you fetch or enter, and those recorded for past days.</li>
         <li>Your hawl start date, zakat years and whether you marked them paid.</li>
-        <li>Your settings: language, theme, lock mode and your PIN.</li>
+        <li>Your settings: language, theme, currency, lock mode and your PIN.</li>
       </ul>
-      <p>The app also ships with a built-in history of silver prices, which is public market data and contains nothing about you.</p>
+      <p>The app also ships with a built-in history of gold and silver prices since 2000, which is public market data and contains nothing about you.</p>
       <p><strong>Backups and exports</strong> are files the app creates on your request (a password-protected backup, or a CSV export). They go only where you choose to save or share them; we never receive them.</p>
       <p><strong>Your PIN cannot be recovered.</strong> It never leaves your phone and protects the key your data is encrypted with, so nobody — including us — can recover or reset it. If you forget it, the only way back in is to clear the app’s data, which erases everything you recorded unless you exported a backup.</p>
     </div>
@@ -136,22 +137,26 @@
       <h2>3. Data that leaves your phone</h2>
 
       <h3>a) Community (only if you use it)</h3>
-      <p>When you open Community, report a problem, request a feature or vote, the app signs you in <strong>anonymously</strong> with Firebase Authentication. This creates a random user ID; it is not linked to your name, email, phone number or Google account. The following is then stored on Google’s Firebase servers:</p>
+      <p>When you open Community, report a problem, request a feature, vote, or report a post, the app signs you in <strong>anonymously</strong> with Firebase Authentication. This creates a random user ID; it is not linked to your name, email, phone number or Google account. The following is then stored on Google’s Firebase servers:</p>
       <div class="table-wrap">
         <table>
           <tr><th>What</th><th>Details</th><th>Who can see it</th></tr>
-          <tr><td>Your anonymous ID</td><td>A random identifier created by Firebase.</td><td>Us.</td></tr>
+          <tr><td>Your anonymous ID</td><td>A random identifier created by Firebase, stored with your posts, votes and reports.</td><td>Us — and, because it is stored with them, anyone who can read your public posts.</td></tr>
           <tr><td>Your posts</td><td>Title, description, type (problem or feature request), whether it is public, time posted, and like/dislike counts.</td><td><strong>Public posts:</strong> every Goge user. <strong>Private posts:</strong> only us.</td></tr>
           <tr><td>Your votes</td><td>Whether you liked or disliked a post.</td><td>Counts are public; who voted is visible only to us.</td></tr>
+          <tr><td>Your reports</td><td>A copy of the post you reported (its words and counts), and when you reported it.</td><td>Only us.</td></tr>
         </table>
       </div>
       <p class="muted">Please don’t include personal information in posts. A public post can be read by anyone using the app.</p>
 
-      <h3>b) App configuration</h3>
-      <p>The app uses Firebase Remote Config to learn the latest app version and the store link. Firebase uses an installation identifier for this. It contains no personal information about you.</p>
+      <h3>b) App Check</h3>
+      <p>To keep scripts and modified copies out of Community, the app proves it is a genuine copy installed from Google Play using Firebase App Check with Google Play Integrity. Google checks the app and the device’s integrity; we receive a pass or fail, not information about you.</p>
 
-      <h3>c) Fetching prices</h3>
-      <p>When you fetch or compare prices, the app reads the public price pages of local gold price providers directly. No personal data is sent; as with any website visit, those providers can see your IP address and device type, and their own privacy policies apply.</p>
+      <h3>c) App configuration</h3>
+      <p>The app uses Firebase Remote Config to learn the latest app version, the store link and the address of the price service. Firebase uses an installation identifier for this. It contains no personal information about you.</p>
+
+      <h3>d) Prices and exchange rates</h3>
+      <p>Gold prices and banks’ exchange rates come from Goge’s own price service, hosted on Cloudflare, which collects them from the public pages of Egyptian gold price sites and banks. The app does not contact those sites itself. Your request carries no personal data; as with any web request, Cloudflare processes your IP address to deliver the response and may keep it briefly in operational logs. We do not use it to identify or track you.</p>
     </div>
 
     <div class="plate">
@@ -167,7 +172,7 @@
     <div class="plate">
       <h2>5. Permissions</h2>
       <ul>
-        <li><strong>Internet</strong> — to fetch prices and use Community.</li>
+        <li><strong>Internet</strong> — to fetch prices and exchange rates, and to use Community.</li>
         <li><strong>Network state</strong> — to tell you when you are offline.</li>
         <li><strong>Biometric</strong> — only if you choose to unlock the app with your fingerprint or face. Biometric data is handled by Android and never reaches the app or us.</li>
       </ul>
@@ -175,19 +180,19 @@
 
     <div class="plate">
       <h2>6. Sharing and service providers</h2>
-      <p>Community data is stored by <strong>Google Firebase</strong> (Authentication, Cloud Firestore and Remote Config), which processes it on our behalf. Firestore data is stored in the United States. See <a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase’s privacy and security information</a>. We do not share your data with anyone else, except where required by law.</p>
+      <p>Community data is stored by <strong>Google Firebase</strong> (Authentication, Cloud Firestore, Remote Config and App Check), which processes it on our behalf. Firestore data is stored in the United States. See <a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase’s privacy and security information</a>. App Check uses <strong>Google Play Integrity</strong>, and the price service runs on <strong>Cloudflare</strong>. We do not share your data with anyone else, except where required by law.</p>
     </div>
 
     <div class="plate">
       <h2>7. Security</h2>
-      <p>Your on-device data is encrypted, and the app can be locked with a PIN or biometrics. Data sent to Firebase travels over encrypted connections (HTTPS/TLS). No system is perfectly secure, but we collect as little as possible so there is little to protect.</p>
+      <p>Your on-device data is encrypted with a key held in Android’s secure keystore, and the app can be locked with a PIN or biometrics. Everything sent to Firebase or the price service travels over encrypted connections (HTTPS/TLS), and Firebase’s security rules let each anonymous account change only its own posts and votes. No system is perfectly secure, but we collect as little as possible so there is little to protect.</p>
     </div>
 
     <div class="plate">
       <h2>8. Keeping and deleting your data</h2>
       <ul>
         <li><strong>On your phone:</strong> kept until you delete it in the app, clear the app’s data, or uninstall Goge — any of which deletes it permanently.</li>
-        <li><strong>Community:</strong> posts and votes are kept until they are deleted. You can edit a post for 10 minutes after posting and change your vote at any time. To delete your posts, votes or anonymous ID, email <a href="mailto:qiraj.tech+support@gmail.com">qiraj.tech+support@gmail.com</a> with the titles of your posts and roughly when you posted them; we will delete them within 30 days.</li>
+        <li><strong>Community:</strong> posts, votes and reports are kept until they are deleted. You can edit a post for 10 minutes after posting and change your vote at any time. To delete your posts, votes or anonymous ID, email <a href="mailto:qiraj.tech+support@gmail.com">qiraj.tech+support@gmail.com</a> or message us on WhatsApp at <a href="https://wa.me/201144622154" rel="noopener"><span dir="ltr">+20 114 462 2154</span></a> with the titles of your posts and roughly when you posted them; we will delete them within 30 days.</li>
       </ul>
     </div>
 
@@ -203,7 +208,7 @@
 
     <div class="plate">
       <h2>11. Contact</h2>
-      <p>Questions or requests: <a href="mailto:qiraj.tech+support@gmail.com">qiraj.tech+support@gmail.com</a></p>
+      <p>Questions or requests: <a href="mailto:qiraj.tech+support@gmail.com">qiraj.tech+support@gmail.com</a>, or WhatsApp <a href="https://wa.me/201144622154" rel="noopener"><span dir="ltr">+20 114 462 2154</span></a>.</p>
     </div>
   </section>
 
@@ -213,7 +218,7 @@
       <h2>باختصار</h2>
       <ul>
         <li>كل ما تسجله في Goge — المشتريات والأسعار وسنوات الزكاة ورمز القفل والإعدادات — يُحفظ <strong>على هاتفك فقط</strong> ومشفّرًا. لا يصلنا أي شيء منه.</li>
-        <li>الشيء الوحيد الذي يصل إلى خوادمنا هو ما ترسله عبر ميزة <strong>المجتمع</strong>: البلاغات عن المشاكل وطلبات الميزات والتصويت، مرتبطة بمعرّف مجهول.</li>
+        <li>الشيء الوحيد الذي يصل إلى خوادمنا هو ما ترسله عبر ميزة <strong>المجتمع</strong>: منشوراتك وتصويتك وبلاغاتك، مرتبطة بمعرّف مجهول.</li>
         <li>لا إعلانات، ولا تحليلات، ولا تتبّع، ولا نبيع أي بيانات أبدًا.</li>
       </ul>
     </div>
@@ -228,11 +233,12 @@
       <p>ما يلي يُحفظ في قاعدة بيانات مشفّرة على جهازك، و<strong>لا يُرفع أبدًا</strong> إلينا ولا إلى أي جهة أخرى:</p>
       <ul>
         <li>مشترياتك (نوع المعدن، الجرامات، الأسعار، العمولات، التواريخ، الملاحظات).</li>
-        <li>أسعار الذهب والفضة التي تجلبها أو تدخلها، والأسعار المسجّلة لأيام سابقة.</li>
+        <li>النقود التي تسجّلها للزكاة، بمبالغها وعملاتها.</li>
+        <li>أسعار الذهب والفضة وأسعار العملات التي تجلبها أو تدخلها، والمسجّلة لأيام سابقة.</li>
         <li>تاريخ بداية الحول، وسنوات الزكاة، وما إذا كنت قد سجّلتها مدفوعة.</li>
-        <li>إعداداتك: اللغة، والمظهر، وطريقة القفل، ورمز PIN.</li>
+        <li>إعداداتك: اللغة، والمظهر، والعملة، وطريقة القفل، ورمز PIN.</li>
       </ul>
-      <p>يأتي التطبيق أيضًا بسجل تاريخي لأسعار الفضة، وهو بيانات سوق عامة لا تحتوي على أي شيء عنك.</p>
+      <p>يأتي التطبيق أيضًا بسجل تاريخي لأسعار الذهب والفضة منذ عام 2000، وهو بيانات سوق عامة لا تحتوي على أي شيء عنك.</p>
       <p><strong>النسخ الاحتياطية والتصدير</strong> ملفات ينشئها التطبيق عند طلبك (نسخة احتياطية محمية بكلمة مرور، أو تصدير CSV). تذهب فقط إلى المكان الذي تختار حفظها فيه أو مشاركتها معه، ولا نستلمها أبدًا.</p>
       <p><strong>لا يمكن استرجاع رمز PIN.</strong> فهو لا يغادر هاتفك، ويحمي المفتاح الذي تُشفَّر به بياناتك، لذلك لا يستطيع أحد — ونحن منهم — استرجاعه أو إعادة تعيينه. إن نسيته فالطريقة الوحيدة للدخول هي مسح بيانات التطبيق، وهذا يحذف كل ما سجلته ما لم تكن قد صدّرت نسخة احتياطية.</p>
     </div>
@@ -241,22 +247,26 @@
       <h2>٣. بيانات تغادر هاتفك</h2>
 
       <h3>أ) المجتمع (فقط إن استخدمته)</h3>
-      <p>عندما تفتح المجتمع، أو تبلّغ عن مشكلة، أو تطلب ميزة، أو تصوّت، يسجّل التطبيق دخولك <strong>بشكل مجهول</strong> عبر Firebase Authentication. يُنشئ ذلك معرّفًا عشوائيًا غير مرتبط باسمك أو بريدك أو رقم هاتفك أو حساب Google الخاص بك. ثم يُحفظ ما يلي على خوادم Firebase التابعة لـ Google:</p>
+      <p>عندما تفتح المجتمع، أو تبلّغ عن مشكلة، أو تطلب ميزة، أو تصوّت، أو تبلّغ عن منشور، يسجّل التطبيق دخولك <strong>بشكل مجهول</strong> عبر Firebase Authentication. يُنشئ ذلك معرّفًا عشوائيًا غير مرتبط باسمك أو بريدك أو رقم هاتفك أو حساب Google الخاص بك. ثم يُحفظ ما يلي على خوادم Firebase التابعة لـ Google:</p>
       <div class="table-wrap">
         <table>
           <tr><th>ماذا</th><th>التفاصيل</th><th>من يستطيع رؤيته</th></tr>
-          <tr><td>معرّفك المجهول</td><td>معرّف عشوائي ينشئه Firebase.</td><td>نحن.</td></tr>
+          <tr><td>معرّفك المجهول</td><td>معرّف عشوائي ينشئه Firebase، ويُحفظ مع منشوراتك وتصويتك وبلاغاتك.</td><td>نحن — ولأنه يُحفظ معها، كل من يستطيع قراءة منشوراتك العامة.</td></tr>
           <tr><td>منشوراتك</td><td>العنوان، والوصف، والنوع (مشكلة أو طلب ميزة)، وهل هو عام، ووقت النشر، وعدد الإعجابات وعدم الإعجاب.</td><td><strong>المنشورات العامة:</strong> كل مستخدمي Goge. <strong>المنشورات الخاصة:</strong> نحن فقط.</td></tr>
           <tr><td>تصويتك</td><td>هل أعجبك المنشور أم لا.</td><td>الأعداد عامة؛ أما من صوّت فلا يراه إلا نحن.</td></tr>
+          <tr><td>بلاغاتك</td><td>نسخة من المنشور الذي أبلغت عنه (نصّه وأعداده)، ووقت البلاغ.</td><td>نحن فقط.</td></tr>
         </table>
       </div>
       <p class="muted">من فضلك لا تضع معلومات شخصية في منشوراتك. المنشور العام يستطيع قراءته أي شخص يستخدم التطبيق.</p>
 
-      <h3>ب) إعدادات التطبيق</h3>
-      <p>يستخدم التطبيق Firebase Remote Config لمعرفة أحدث إصدار ورابط المتجر. يستخدم Firebase لذلك معرّفًا للتثبيت لا يحتوي على أي معلومات شخصية عنك.</p>
+      <h3>ب) App Check</h3>
+      <p>لإبعاد البرامج الآلية والنسخ المعدّلة عن المجتمع، يُثبت التطبيق أنه نسخة أصلية مثبّتة من Google Play باستخدام Firebase App Check مع Google Play Integrity. تتحقق Google من سلامة التطبيق والجهاز، ولا يصلنا إلا قبول أو رفض، لا معلومات عنك.</p>
 
-      <h3>ج) جلب الأسعار</h3>
-      <p>عند جلب الأسعار أو مقارنتها، يقرأ التطبيق صفحات الأسعار العامة لمزوّدي أسعار الذهب المحليين مباشرة. لا تُرسَل أي بيانات شخصية؛ ومثل أي زيارة لموقع، يمكن لهؤلاء المزوّدين رؤية عنوان IP ونوع جهازك، وتنطبق عليهم سياسات الخصوصية الخاصة بهم.</p>
+      <h3>ج) إعدادات التطبيق</h3>
+      <p>يستخدم التطبيق Firebase Remote Config لمعرفة أحدث إصدار ورابط المتجر وعنوان خدمة الأسعار. يستخدم Firebase لذلك معرّفًا للتثبيت لا يحتوي على أي معلومات شخصية عنك.</p>
+
+      <h3>د) الأسعار وأسعار العملات</h3>
+      <p>تأتي أسعار الذهب وأسعار صرف البنوك من خدمة أسعار خاصة بـ Goge مستضافة على Cloudflare، تجمعها من الصفحات العامة لمواقع أسعار الذهب والبنوك المصرية، ولا يتصل التطبيق بتلك المواقع بنفسه. لا يحمل طلبك أي بيانات شخصية؛ ومثل أي طلب عبر الإنترنت، تعالج Cloudflare عنوان IP الخاص بك لإيصال الرد، وقد تحتفظ به لفترة قصيرة في سجلات التشغيل. ولا نستخدمه لمعرفتك أو تتبّعك.</p>
     </div>
 
     <div class="plate">
@@ -272,7 +282,7 @@
     <div class="plate">
       <h2>٥. الأذونات</h2>
       <ul>
-        <li><strong>الإنترنت</strong> — لجلب الأسعار واستخدام المجتمع.</li>
+        <li><strong>الإنترنت</strong> — لجلب الأسعار وأسعار العملات، واستخدام المجتمع.</li>
         <li><strong>حالة الشبكة</strong> — لإخبارك عندما تكون غير متصل.</li>
         <li><strong>البصمة</strong> — فقط إن اخترت فتح التطبيق ببصمتك أو وجهك. يتعامل Android مع بيانات البصمة، ولا تصل إلى التطبيق ولا إلينا.</li>
       </ul>
@@ -280,19 +290,19 @@
 
     <div class="plate">
       <h2>٦. المشاركة ومزوّدو الخدمة</h2>
-      <p>تُحفظ بيانات المجتمع لدى <strong>Google Firebase</strong> ‏(Authentication وCloud Firestore وRemote Config)، الذي يعالجها نيابةً عنا. وتُحفظ بيانات Firestore في الولايات المتحدة. راجع <a href="https://firebase.google.com/support/privacy" rel="noopener">معلومات الخصوصية والأمان من Firebase</a>. لا نشارك بياناتك مع أي جهة أخرى، إلا إذا ألزمنا القانون بذلك.</p>
+      <p>تُحفظ بيانات المجتمع لدى <strong>Google Firebase</strong> ‏(Authentication وCloud Firestore وRemote Config وApp Check)، الذي يعالجها نيابةً عنا. وتُحفظ بيانات Firestore في الولايات المتحدة. راجع <a href="https://firebase.google.com/support/privacy" rel="noopener">معلومات الخصوصية والأمان من Firebase</a>. ويستخدم App Check خدمة <strong>Google Play Integrity</strong>، وتعمل خدمة الأسعار على <strong>Cloudflare</strong>. لا نشارك بياناتك مع أي جهة أخرى، إلا إذا ألزمنا القانون بذلك.</p>
     </div>
 
     <div class="plate">
       <h2>٧. الأمان</h2>
-      <p>بياناتك على الجهاز مشفّرة، ويمكن قفل التطبيق برمز PIN أو بالبصمة. وتنتقل البيانات المرسلة إلى Firebase عبر اتصالات مشفّرة (HTTPS/TLS). لا يوجد نظام آمن تمامًا، لكننا نجمع أقل ما يمكن، فيبقى القليل مما يحتاج إلى حماية.</p>
+      <p>بياناتك على الجهاز مشفّرة بمفتاح محفوظ في مخزن المفاتيح الآمن في Android، ويمكن قفل التطبيق برمز PIN أو بالبصمة. وكل ما يُرسل إلى Firebase أو خدمة الأسعار ينتقل عبر اتصالات مشفّرة (HTTPS/TLS)، وتسمح قواعد الأمان في Firebase لكل حساب مجهول بتغيير منشوراته وتصويته فقط. لا يوجد نظام آمن تمامًا، لكننا نجمع أقل ما يمكن، فيبقى القليل مما يحتاج إلى حماية.</p>
     </div>
 
     <div class="plate">
       <h2>٨. الاحتفاظ بالبيانات وحذفها</h2>
       <ul>
         <li><strong>على هاتفك:</strong> تبقى حتى تحذفها من التطبيق، أو تمسح بيانات التطبيق، أو تزيل Goge — وأيٌّ من ذلك يحذفها نهائيًا.</li>
-        <li><strong>المجتمع:</strong> تبقى المنشورات والتصويت حتى تُحذف. يمكنك تعديل منشورك خلال 10 دقائق من نشره، وتغيير تصويتك في أي وقت. لحذف منشوراتك أو تصويتك أو معرّفك المجهول، راسلنا على <a href="mailto:qiraj.tech+support@gmail.com">qiraj.tech+support@gmail.com</a> مع عناوين منشوراتك ووقت نشرها تقريبًا، وسنحذفها خلال 30 يومًا.</li>
+        <li><strong>المجتمع:</strong> تبقى المنشورات والتصويت والبلاغات حتى تُحذف. يمكنك تعديل منشورك خلال 10 دقائق من نشره، وتغيير تصويتك في أي وقت. لحذف منشوراتك أو تصويتك أو معرّفك المجهول، راسلنا على <a href="mailto:qiraj.tech+support@gmail.com">qiraj.tech+support@gmail.com</a> أو عبر واتساب على <a href="https://wa.me/201144622154" rel="noopener"><span dir="ltr">+20 114 462 2154</span></a> مع عناوين منشوراتك ووقت نشرها تقريبًا، وسنحذفها خلال 30 يومًا.</li>
       </ul>
     </div>
 
@@ -308,7 +318,7 @@
 
     <div class="plate">
       <h2>١١. التواصل</h2>
-      <p>للأسئلة أو الطلبات: <a href="mailto:qiraj.tech+support@gmail.com">qiraj.tech+support@gmail.com</a></p>
+      <p>للأسئلة أو الطلبات: <a href="mailto:qiraj.tech+support@gmail.com">qiraj.tech+support@gmail.com</a>، أو واتساب <a href="https://wa.me/201144622154" rel="noopener"><span dir="ltr">+20 114 462 2154</span></a>.</p>
     </div>
   </section>
   </div>
